@@ -5,12 +5,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut buffer = img.clone().into_rgb8();
     let dither = 160;
 
-  //  for pixel in buffer.enumerate_pixels_mut() {
-    //  if  *pixel.2 < (150,150,150) {
-      //  *pixel.2 = image::Rgb([255,255,255]);
-      //}   
-    //}
-
     for (x,y,pixel) in buffer.enumerate_pixels_mut(){
 
         if (pixel[0] < dither) && (pixel[1] < dither) && (pixel[2] < dither){
